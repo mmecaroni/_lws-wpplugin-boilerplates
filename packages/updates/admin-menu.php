@@ -1,7 +1,7 @@
 <?php
 
 add_submenu_page(
-  'lws_wpsettings_admin_dashboard',
+  'lws_wpsettings_boilerplate_dashboard',
   'Updates',
   'Updates',
   'manage_options',
