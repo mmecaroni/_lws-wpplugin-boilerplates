@@ -25,6 +25,9 @@ define( 'LWS_WPSETTINGS_BOILERPLATE_SLUG', 'lws_admin_settings' );
 define( 'LWS_WPSETTINGS_BOILERPLATE_FOLDER', dirname( plugin_basename( __FILE__ ) ) );
 define( 'LWS_WPSETTINGS_BOILERPLATE_URL', plugins_url( '', __FILE__ ) );
 
+/****** Display Version on Frontend Footer */
+add_action("wp_footer", function() { echo "LWS WpSettings Boilerplate Version: " . LWS_WPSETTINGS_BOILERPLATE_DIR; });
+
 /****** Require Menu handler file*/
 require_once trailingslashit(LWS_WPSETTINGS_BOILERPLATE_DIR) . 'includes/menu/add-menu-pages.php';
 
@@ -32,5 +35,28 @@ require_once trailingslashit(LWS_WPSETTINGS_BOILERPLATE_DIR) . 'includes/menu/ad
 require_once trailingslashit(LWS_WPSETTINGS_BOILERPLATE_DIR) . 'packages/dashboard/page-dashboard.php';
 require_once trailingslashit(LWS_WPSETTINGS_BOILERPLATE_DIR) . 'packages/updates/page-updates.php';
 
-/****** Display Version on Frontend Footer */
-add_action("wp_footer", function() { echo "LWS WpSettings Boilerplate Version: " . LWS_WPSETTINGS_BOILERPLATE_DIR; });
+/**************************************************************************************************/
+/****** Enqueue Styles and Scripts ****************************************************************/
+
+/****** ISSUES enqueue Tailwind file */
+require_once trailingslashit(LWS_WPSETTINGS_BOILERPLATE_DIR) . 'includes/enqueue/tailwind-cdn.php';
+
+/****** Enqueue Styles and Scripts */
+function lws_wpsettings_boilerplate_enqueue_scripts($hook_suffix) {
+	// Check if the current page belongs to the plugin's admin pages
+	if (strpos($hook_suffix, 'lws_wpsettings_boilerplate') === false) {
+			return;
+	}
+
+  wp_enqueue_script(
+    'htmx', 
+    plugin_dir_url(__FILE__) . 'assets/vendors/htmx@1.9.10.min.js', 
+    array(), '1.9.10', true
+  );
+
+	wp_enqueue_script(
+		'alpinejs', 
+		plugin_dir_url(__FILE__) . 'assets/vendors/alpine@3.13.5.min.js', 
+		array(), '3.13.5', true);
+}
+add_action('admin_enqueue_scripts', 'lws_wpsettings_boilerplate_enqueue_scripts');

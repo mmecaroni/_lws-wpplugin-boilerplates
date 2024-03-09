@@ -4,7 +4,7 @@ function lws_wpsettings_boilerplate_menu_pages() {
 
     add_menu_page(
         'Dashboard',
-        'Boilerplate Settings',
+        'Boilerplate',
         'manage_options',
         'lws_wpsettings_boilerplate_dashboard', // menu slug | construct the URL
         'lws_wpsettings_boilerplate_dashboard_page', // callback function renders content
