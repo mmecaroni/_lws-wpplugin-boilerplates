@@ -1,2 +1,2 @@
-# lws-wpsettings-bolierplate
-A Bolierplate Settings Plugin by Liquid Studio Group
+# lws-wpsettings-boilerplate
+A Boilerplate Settings Plugin by Liquid Studio Group
