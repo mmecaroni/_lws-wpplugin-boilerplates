@@ -13,7 +13,9 @@ function lws_wpsettings_boilerplate_menu_pages() {
     );
 
     require_once trailingslashit(LWS_WPSETTINGS_BOILERPLATE_DIR) . 'packages/dashboard/admin-menu.php';
+    require_once trailingslashit(LWS_WPSETTINGS_BOILERPLATE_DIR) . 'packages/addons/admin-menu.php';
     require_once trailingslashit(LWS_WPSETTINGS_BOILERPLATE_DIR) . 'packages/updates/admin-menu.php';
+    require_once trailingslashit(LWS_WPSETTINGS_BOILERPLATE_DIR) . 'packages/restapi/admin-menu.php';
 
 }
 add_action('admin_menu', 'lws_wpsettings_boilerplate_menu_pages');

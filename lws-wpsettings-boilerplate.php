@@ -33,7 +33,9 @@ require_once trailingslashit(LWS_WPSETTINGS_BOILERPLATE_DIR) . 'includes/menu/ad
 
 /****** Packages */
 require_once trailingslashit(LWS_WPSETTINGS_BOILERPLATE_DIR) . 'packages/dashboard/page-dashboard.php';
+require_once trailingslashit(LWS_WPSETTINGS_BOILERPLATE_DIR) . 'packages/addons/page-addons.php';
 require_once trailingslashit(LWS_WPSETTINGS_BOILERPLATE_DIR) . 'packages/updates/page-updates.php';
+require_once trailingslashit(LWS_WPSETTINGS_BOILERPLATE_DIR) . 'packages/restapi/page-restapi.php';
 
 /**************************************************************************************************/
 /****** Enqueue Styles and Scripts ****************************************************************/
@@ -48,15 +50,13 @@ function lws_wpsettings_boilerplate_enqueue_scripts($hook_suffix) {
 			return;
 	}
 
-  wp_enqueue_script(
-    'htmx', 
-    plugin_dir_url(__FILE__) . 'assets/vendors/htmx@1.9.10.min.js', 
-    array(), '1.9.10', true
-  );
+	// require_once trailingslashit(LWS_WPSETTINGS_BOILERPLATE_DIR) . 'includes/enqueue/style-tailwind.php';
+	// lws_wpsettings_boilerplate_enqueue_style_tailwind();
 
-	wp_enqueue_script(
-		'alpinejs', 
-		plugin_dir_url(__FILE__) . 'assets/vendors/alpine@3.13.5.min.js', 
-		array(), '3.13.5', true);
+	require_once trailingslashit(LWS_WPSETTINGS_BOILERPLATE_DIR) . 'includes/enqueue/script-htmx.php';
+	lws_wpsettings_boilerplate_enqueue_script_htmx();
+
+	require_once trailingslashit(LWS_WPSETTINGS_BOILERPLATE_DIR) . 'includes/enqueue/script-alpinejs.php';
+	lws_wpsettings_boilerplate_enqueue_script_alpinejs();
 }
 add_action('admin_enqueue_scripts', 'lws_wpsettings_boilerplate_enqueue_scripts');
