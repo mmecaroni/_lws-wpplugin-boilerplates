@@ -1,0 +1,16 @@
+{
+  "name": "lws-wpsettings-boilerplate",
+  "version": "0.0.0",
+  "description": "A Boilerplate Settings Plugin by Liquid Studio Group",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.0.0-alpha.8",
+    "tailwindcss": "^4.0.0-alpha.8"
+  }
+}

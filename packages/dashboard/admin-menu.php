@@ -1,4 +1,7 @@
 <?php
+/****************************************************************
+ * Add Sub Menu Page for Dashboard
+ */
 
 add_submenu_page(
   'lws_wpsettings_boilerplate_dashboard',

@@ -1,6 +1,6 @@
 <?php
 /********************************
- * Updates Page
+ * Updates Admin Page
  */
 
 require_once trailingslashit(LWS_WPSETTINGS_BOILERPLATE_DIR) . 'packages/updates/view-card-updates.php';

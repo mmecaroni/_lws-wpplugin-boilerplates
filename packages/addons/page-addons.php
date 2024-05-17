@@ -1,6 +1,6 @@
 <?php
 /********************************
- * Addons Page
+ * Addons Admin Page
  */
 
 function lws_wpsettings_boilerplate_addons_page() {

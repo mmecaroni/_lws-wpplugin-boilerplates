@@ -1,25 +1,21 @@
 <?php
 /******************************************
- * TailwindCSS v3.4.1
+ * TailwindCSS v4.0.0 | v3.4.1
  */
 
 function lws_wpsettings_boilerplate_enqueue_style_tailwind() {
-
-	$local_script_path = plugin_dir_path(__FILE__) . 'assets/vendors/tailwind.min.css';
-	$local_script_url = plugin_dir_url(__FILE__) . 'assets/vendors/tailwind.min.css';
+	// $local_script_url = LWS_WPSETTINGS_BOILERPLATE_URL . '/assets/vendors/style-test.css';
+	// $cdn_script_url = 'https://cdn.tailwindcss.com';
+	$local_script_url = LWS_WPSETTINGS_BOILERPLATE_URL . '/assets/css/style.css';
 	$cdn_script_url = 'https://cdn.tailwindcss.com';
 
-	if (file_exists($local_script_path)) {
-    wp_enqueue_style(
-			'lws-boilerplate-tailwind', $local_script_url, array(), '3.4.1', true
-		);
+	if (file_exists(LWS_WPSETTINGS_BOILERPLATE_DIR . 'assets/css/style.css')) {
+			wp_enqueue_style('lws-boilerplate-tailwind', $local_script_url, array(), '4.0.0');
 	} else {
-		wp_enqueue_style(
-			'lws-boilerplate-tailwind', $cdn_script_url, array(), '3.4.1', true
-		);
+			wp_enqueue_style('lws-boilerplate-tailwind', $cdn_script_url, array(), '3.4.1');
 	}
-
 }
+
 
 
 // function lws_wpsettings_boilerplate_enqueue_styles($hook_suffix) {

@@ -1,6 +1,6 @@
 <?php
 /********************************
- * Addons Page
+ * RestApi Admin Page
  */
 
 function lws_wpsettings_boilerplate_restapi_page() {

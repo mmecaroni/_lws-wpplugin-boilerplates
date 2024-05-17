@@ -1,4 +1,7 @@
 <?php
+/****************************************************************
+ * Add Sub Menu Page for Updates
+ */
 
 add_submenu_page(
   'lws_wpsettings_boilerplate_dashboard',

@@ -3,13 +3,13 @@
 function lws_wpsettings_boilerplate_menu_pages() {
 
     add_menu_page(
-        'Dashboard',
-        'Boilerplate',
-        'manage_options',
-        'lws_wpsettings_boilerplate_dashboard', // menu slug | construct the URL
-        'lws_wpsettings_boilerplate_dashboard_page', // callback function renders content
-        'dashicons-tagcloud',
-        101
+        /** Page title	*/ 'Dashboard',
+        /** Menu title	*/ 'Boilerplate',
+        /** Capability	*/ 'manage_options',
+        /** Menu URL    */ 'lws_wpsettings_boilerplate_dashboard',
+        /** Callback    */ 'lws_wpsettings_boilerplate_dashboard_page',
+        /** Icon URL	*/ 'dashicons-tagcloud',
+        /** Position	*/ 101
     );
 
     require_once trailingslashit(LWS_WPSETTINGS_BOILERPLATE_DIR) . 'packages/dashboard/admin-menu.php';

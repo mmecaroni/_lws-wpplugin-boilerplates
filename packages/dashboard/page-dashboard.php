@@ -1,6 +1,6 @@
 <?php
 /********************************
- * Dashboard Page
+ * Dashboard Admin Page
  */
 
 require_once trailingslashit(LWS_WPSETTINGS_BOILERPLATE_DIR) . 'packages/dashboard/view-htmx-testing.php';
