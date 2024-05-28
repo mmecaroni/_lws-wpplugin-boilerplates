@@ -3,7 +3,7 @@
  * AlpineJS v3.13.5
  */
 
-function lws_wpsettings_boilerplate_enqueue_script_alpinejs() {
+function lws_wpsettings_theme_enqueue_script_alpinejs() {
 
 	$local_script_path = plugin_dir_path(__FILE__) . 'assets/vendors/alpine@3.13.5.min.js';
 	$local_script_url = plugin_dir_url(__FILE__) . 'assets/vendors/alpine@3.13.5.min.js';
@@ -11,16 +11,16 @@ function lws_wpsettings_boilerplate_enqueue_script_alpinejs() {
 
 	if (file_exists($local_script_path)) {
 			wp_enqueue_script(
-				'lws-boilerplate-alpinejs', $local_script_url, array(), '3.13.7', true
+				'lws-theme-alpinejs', $local_script_url, array(), '3.13.7', true
 			);
 	} else {
 			wp_enqueue_script(
-				'lws-boilerplate-alpinejs', $cdn_script_url, array(), '3.13.7', true
+				'lws-theme-alpinejs', $cdn_script_url, array(), '3.13.7', true
 			);
 	}
 
 	// wp_enqueue_script(
-	// 	'alpinejs', 
+	// 	'lws-theme-alpinejs-cdn', 
 	// 	plugin_dir_url(__FILE__) . 'assets/vendors/alpine@3.13.7.min.js', 
 	// 	array(), '3.13.7', true
 	// );

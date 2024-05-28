@@ -21,7 +21,7 @@ define( 'LWS_WPSETTINGS_BOILERPLATE_VERSION', 'v0.0.0' );
 define( 'LWS_WPSETTINGS_BOILERPLATE_DIR', plugin_dir_path( __FILE__ ) );
 define( 'LWS_WPSETTINGS_BOILERPLATE_ROOT_FILE', __FILE__ );
 define( 'LWS_WPSETTINGS_BOILERPLATE_ROOT_FILE_RELATIVE_PATH', plugin_basename( __FILE__ ) );
-define( 'LWS_WPSETTINGS_BOILERPLATE_SLUG', 'lws_admin_settings' );
+define( 'LWS_WPSETTINGS_BOILERPLATE_SLUG', 'lws_boilerplate_settings' );
 define( 'LWS_WPSETTINGS_BOILERPLATE_FOLDER', dirname( plugin_basename( __FILE__ ) ) );
 define( 'LWS_WPSETTINGS_BOILERPLATE_URL', plugins_url( '', __FILE__ ) );
 
@@ -45,7 +45,7 @@ require_once trailingslashit(LWS_WPSETTINGS_BOILERPLATE_DIR) . 'packages/restapi
 
 /****** Enqueue Styles and Scripts */
 function lws_wpsettings_boilerplate_enqueue_scripts($hook_suffix) {
-	// Check if the current page belongs to the plugin's admin pages
+	// Check if the current page belongs to the plugin's boilerplate settings admin pages
 	if (strpos($hook_suffix, 'lws_wpsettings_boilerplate') === false) {
 			return;
 	}

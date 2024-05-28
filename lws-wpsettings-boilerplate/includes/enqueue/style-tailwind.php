@@ -12,7 +12,7 @@ function lws_wpsettings_boilerplate_enqueue_style_tailwind() {
 	if (file_exists(LWS_WPSETTINGS_BOILERPLATE_DIR . 'assets/css/style.css')) {
 			wp_enqueue_style('lws-boilerplate-tailwind', $local_script_url, array(), '4.0.0');
 	} else {
-			wp_enqueue_style('lws-boilerplate-tailwind', $cdn_script_url, array(), '3.4.1');
+			wp_enqueue_style('lws-boilerplate-tailwind-cdn', $cdn_script_url, array(), '3.4.1');
 	}
 }
 
